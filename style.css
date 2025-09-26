@@ -1,0 +1,594 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+/*
+    ********************************************************
+    *                 TOPBAR SECTION                       *
+    ********************************************************
+*/
+
+.topbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.topbar-container .topbar{
+    padding: 10px 0;
+    background-color: white;
+}
+
+.topbar .topbar-col .topbar-mid-btn{
+    padding: 15px 55px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.topbar .topbar-col .topbar-mid-btn:hover{
+    background-color: #E2E5E9;
+}
+
+.topbar .topbar-col .topbar-right-btn{
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.topbar .topbar-col .search{
+    position: relative;
+    display: inline-block;
+}
+
+.topbar .topbar-col input{
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: #E2E5E9;
+    border: none;
+}
+
+.topbar .topbar-col input::placeholder{
+    padding-left: 10px;
+}
+
+.topbar .topbar-col .search-bar{
+    position: absolute;
+    left: 0px;
+    margin-top: 10px;
+    background: none;
+    border: none;
+}
+
+.topbar .topbar-col .topbar-profile{
+    background-color: none;
+}
+
+.topbar .topbar-col .facebook-logo{
+    margin-right: 10px;
+}
+
+.topbar .topbar-col .find-friends{
+    border-radius: 50px;
+    border: none;
+    padding: 10px 25px;
+}
+
+.dropdown .dropdown-menu.show{
+    width: 350px;
+    height: auto;
+    max-height: 250px;
+    padding: 20px 10px 10px 10px;
+    font-size: 20px;
+
+}
+
+.profile-viewer-icon{
+    font-size: 20px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.dropdown .dropdown-menu.show .text-danger{
+    background-color: #F75270;
+    color: white !important;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dropdown .dropdown-menu.show .text-danger:hover{
+    background-color: #DC143C;
+}
+
+/*
+    ********************************************************
+    *        COVER IMAGE SECTION                           *
+    ********************************************************
+*/
+
+/* COVER IMG */
+.cover-img-col {
+    background: url(img/cover-img.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+    background-position-y: 30%;
+    width: 100%;
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+}
+
+.cover-img-row {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.cover-img-row::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cover-img-row, .profile-row {
+    padding: 0 300px;
+    background-color: white;
+}
+
+.profile-pic{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    margin-left: 15px;
+    object-fit: cover;
+    margin-top: -50px;
+
+}
+
+.profile-pic-col{
+    margin-bottom: 100px;
+}
+
+.profile-details{
+    margin-top: 30px;
+}
+
+.profile-details h3{
+    font-size: 32px;
+    color: #080809;
+    font-weight: 800;
+}
+
+.profile-details h5{
+    font-size: 18px;
+    color: #656869;
+    font-weight: 600;
+}
+
+.profile-details .followers .followers-img{
+    border-radius: 50%;
+    border: 1px solid #fff ;
+    margin: 0 -6px;
+}
+
+.profile-btn, .nav-more-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.profile-btn button,
+.nav-more-btn button{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.profile-btn .follow-btn{
+    background-color: #0861F2;
+    color: #fff;
+}
+
+.profile-row hr{
+    margin-top: 30px !important;
+    padding: 0 10px;
+}
+
+.nav-section-row .nav-section-col .nav .nav-item .nav-link {
+    text-decoration: none;
+    padding: 0px 10px;
+    color: #656869;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-section-row .nav-section-col .nav .nav-item .nav-link:hover{
+    background-color: #E2E5E9;
+}
+
+.profile-btn button{
+    column-gap: 10px;
+    margin-right: 10px;
+
+}
+
+/* POST SECTION */
+.post-container{
+    padding: 0 300px;
+}
+
+.post-section{
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* intro section */
+.intro-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.intro-box h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #080809;
+}
+
+.intro-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.intro-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.intro-item i {
+    font-size: 18px;
+    color: #a1a1a1;
+    margin-right: 8px;
+}
+
+.intro-item strong{
+    font-weight: 600;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.post-col .post-section .filter-button{
+    border: none;
+    background-color: #E2E5E9;
+    padding: 10px 15px;
+    border-radius: 10px;
+} 
+
+.post-col .post-section .filter-button:hover{
+    background-color: #c4c6c9;
+} 
+
+.post-col .post-section .post-input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.post-col{
+    padding: 10px;
+}
+
+.post-col .intro-box .intro-item .bi{
+    color: #a1a1a1;
+    padding-right: 3px;
+} 
+
+.intro-box span.intro-item{
+    font-size: 16px;
+    text-align: start;
+}
+
+.nav-section-row .nav-section-col ul,
+.nav-more-btn{
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.postbox-textarea{
+    width: 100%;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.postbox-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: #3b5998;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postbox-button:hover{
+    background: #2d4373;
+}
+
+/* Post action bar */
+.post-action {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 10px;
+}
+
+.post-action .action-btn {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+}
+
+.post-action .action-btn:hover {
+    background-color: #f0f2f5;
+    border-radius: 5px;
+}
+
+.post-action i {
+    margin-right: 5px;
+}
+.post-action .action-btn .action-icons{
+    font-weight: 800 !important;
+    font-size: 16px;
+}
+
+.post-section .post-user-profile-img{
+    font-size: 3rem;
+    color: #a1a1a1;
+}
+
+.post-section .post-section-header-btn{
+    padding: 10px;
+}
+
+.post-section .post-section-header-btn:hover{
+    background-color: #dbdbdb;
+    border-radius: 50%;
+}
+
+.post-section .post{
+    padding: 10px;
+    font-size: 18px;
+}
+.post-section .post-section-header strong{
+    font-size: 15px;
+    font-weight: 600;
+    color: #080809;
+}
+
+.post-section .post-section-header small{
+    font-size: 13px;
+    font-weight: 600;
+    color: #656869;
+}
+
+.post-counts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #656869;
+    padding: 0 10px;
+}
+
+.likes-icon{
+    color: white;
+    background-color: #04A3FB;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+.heart-icon{
+    color: white;
+    background-color: red;
+    font-size: 11px;
+    padding: 5px 5px 3px 5px;
+    border-radius: 50%;
+    margin-left: -10px;
+    overflow: hidden;
+    border: 1px solid white;
+    
+}
+
+/* Responsive Layout */
+@media (max-width: 1025px){
+    .cover-img-row, .profile-row, .nav-section-row, .post-container {
+        padding: 0 0px !important;      
+    }
+
+    .cover-img-col{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .topbar .topbar-col input::placeholder{
+        color: transparent;
+    }
+
+    .topbar .topbar-col input{
+        padding: 10px 20px;
+        width: 10px;
+    }
+    
+    .topbar .topbar-col .topbar-mid-btn {
+        padding: 5px 20px;
+    }
+
+    .topbar .topbar-col .find-friends{
+        display: none;
+    }
+
+    .topbar .topbar-col .topbar-right-btn{
+        margin: 0 6px;
+    }
+
+    .profile-details{
+        margin-left: 50px;
+    }
+
+    .nav-section-row .nav-section-col .nav .nav-item .nav-link{
+        padding: 13px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cover-img-row, .profile-row, .nav-section-row, .post-container {
+        padding: 0 0px !important;      
+    }
+
+    .profile-pic-col,
+    .profile-details,
+    .profile-btn{
+        text-align: center;
+    }
+
+    .profile-pic{
+        position: relative;
+        margin-top: -95px;
+    }
+
+    .profile-pic-col {
+        display: flex;
+        justify-content: center;       
+        margin-bottom: 0px;         
+    }
+
+    .followers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;       
+        gap: 4px;                      
+    }
+
+    .profile-btn {
+        display: flex;
+        justify-content: center;      
+        gap: 12px;
+    }
+
+    .nav-more-btn {
+        display: flex;
+        justify-content: center;  
+        padding-right: 20px;    
+    }
+
+    .topbar .topbar-col input::placeholder{
+        color: transparent;
+    }
+
+    .topbar .topbar-col input{
+        padding: 10px 20px;
+        width: 10px;
+    }
+
+    .topbar .topbar-col .topbar-mid-btn {
+        padding: 5px 20px;
+    }
+
+    .topbar .topbar-col .find-friends{
+        display: none;
+    }
+
+    .topbar .topbar-col .topbar-right-btn{
+        margin: 0 6px;
+    }
+
+    .nav-section-row .nav-section-col .nav .nav-item .nav-link {
+        padding: 10px 8px;
+    }
+
+    .cover-img-col{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .profile-details{
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .profile-btn button {
+        flex: 1;
+        width: auto;
+    }
+
+    .profile-btn {
+        display: flex; 
+        gap: 8px;
+        padding: 0 10px;
+    }
+}
